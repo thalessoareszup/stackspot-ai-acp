@@ -1,0 +1,3 @@
+[submodule "kotlin-sdk"]
+	path = kotlin-sdk
+	url = git@github.com:thalessoareszup/acp-server-kotlin-sdk.git

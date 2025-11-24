@@ -1,0 +1,17 @@
+<configuration>
+    <property name="HOME" value="${HOME:-${user.home}}"/>
+    <property name="LOG_DIR" value="${HOME}/.local"/>
+    <property name="LOG_FILE" value="${LOG_DIR}/acp-server.log"/>
+
+    <appender name="FILE" class="ch.qos.logback.core.FileAppender">
+        <file>/home/thales/.local/acp-server.log</file>
+        <append>true</append>
+        <encoder>
+            <pattern>%d{yyyy-MM-dd HH:mm:ss} %-5level %logger{36} %thread{128} - %msg%n</pattern>
+        </encoder>
+    </appender>
+
+    <root level="INFO">
+        <appender-ref ref="FILE"/>
+    </root>
+</configuration>
